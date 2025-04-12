@@ -54,6 +54,16 @@ body {
 
     padding-left: 32px;
     align-self: center;
+    font-size: 2rem;
+    position: relative;
+}
+
+.header .greetings span {
+    font-size: 1rem;
+    position: absolute;
+    top: -20px;
+    left: 43px;
+
 }
 
 .header .button-container {
@@ -96,6 +106,7 @@ body {
     grid-template-areas: 
     "cards announcement"
     "cards trending";
+    gap: 24px;
 }
 
 .main .cards-container {
@@ -104,13 +115,12 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    gap: 15px;
+    gap: 24px;
 }
 
 .main .cards-container span {
     position: absolute;
-    top: -60px;
-    left: -10px;
+    top: -45px;
 }
 
 .main .cards-container div {
@@ -126,8 +136,69 @@ body {
 }
 .main .announcement-container {
     grid-area: announcement;
+    background-color: #ffffff;
+    border-radius: 8px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+}
+.announcement-container div h3,
+.announcement-container div p,
+.trending-container div span,
+.trending-container div p {
+    margin: 0px;
+}
+
+.announcement-container div {
+    width: 80%;
+    padding: 20px;
+    justify-self: center;
+}
+
+.announcement-container .border-bot {
+    border-bottom: 1px solid #eaeaea;
+}
+
+.announcement-container span,
+.trending-container > span {
+    position: absolute;
+    top: -45px;
 }
 
 .main .trending-container {
     grid-area: trending;
+    background-color: #ffffff;
+    border-radius: 8px;
+    position: relative;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr;
+    align-items: center;
+    height: 80%;
+    align-self: end;
+}
+
+.trending-container div {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: repeat(2, 1fr);
+    width: 80%;
+    justify-self: center;
+}
+
+.trending-container div > span {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.trending-container div > p {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.trending-container div > img {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
 }
