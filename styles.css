@@ -1,0 +1,133 @@
+body {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 3fr;
+}
+
+.header {
+    background-color: #ffffff;
+    box-shadow: 0 8px 16px 0px #ccd1d8;
+    color: black;
+
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 2fr;
+}
+
+.header .pre-header {
+    grid-column: 1 / 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pre-header div:first-child {
+    width: 66%;
+    padding-left: 32px;
+}
+
+.pre-header div:last-child {
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.pre-header input[type='search'] {
+    width: 500px;
+    margin-left: 1rem;
+    background-color: #e2e8f0;
+}
+
+.header .greetings {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+
+    padding-left: 32px;
+    align-self: center;
+}
+
+.header .button-container {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.sidebar {
+    background-color: #1992d4;
+    color: #ebe6e7;
+
+    grid-column: 1 / 2;
+    grid-row:  1 / 3;
+
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+
+    font-size: 2rem;
+}
+
+.main {
+    background-color: #e2e8f0;
+    padding: 80px 40px;
+    
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "cards announcement"
+    "cards trending";
+}
+
+.main .cards-container {
+    position: relative;
+    grid-area: cards;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.main .cards-container span {
+    position: absolute;
+    top: -60px;
+    left: -10px;
+}
+
+.main .cards-container div {
+    background-color: #ffffff;
+    border-radius: 8px;
+    border-left: 10px solid #f0b429;
+    padding: 32px;
+}
+
+.main .cards-container div h3,
+.main .cards-container div p {
+    margin: 0px;
+}
+.main .announcement-container {
+    grid-area: announcement;
+}
+
+.main .trending-container {
+    grid-area: trending;
+}
