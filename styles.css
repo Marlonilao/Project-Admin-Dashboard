@@ -65,10 +65,10 @@ body {
     border: none;
 }
 
-/* .pre-header div:first-child > span {
+.pre-header div:first-child > span {
     position: relative;
     bottom: -8px;
-} */
+}
 
 .pre-header div:first-child > span:hover,
 .pre-header div:last-child > span:hover {
