@@ -58,17 +58,17 @@ body {
 }
 
 .pre-header input[type='search'] {
-    width: 900px;
+    width: 800px;
     background-color: #e2e8f0;
     height: 36px;
     border-radius: 16px;
     border: none;
 }
 
-.pre-header div:first-child > span {
+/* .pre-header div:first-child > span {
     position: relative;
     bottom: -8px;
-}
+} */
 
 .pre-header div:first-child > span:hover,
 .pre-header div:last-child > span:hover {
